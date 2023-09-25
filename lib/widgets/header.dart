@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:math';
 
 import 'package:charts_painter/chart.dart';
@@ -33,12 +35,15 @@ class _HeaderState extends State<Header> {
   }
 
   void _updateValues() {
+    // ignore: no_leading_underscores_for_local_identifiers
     final Random _rand = Random();
+    // ignore: no_leading_underscores_for_local_identifiers
     final double _difference = 2 + (_rand.nextDouble() * 15);
 
     targetMax =
         3 + (_rand.nextDouble() * _difference * 0.75) - (_difference * 0.25);
     _values.addAll(List.generate(3, (index) {
+      // ignore: no_leading_underscores_for_local_identifiers
       List<BubbleValue<void>> _items = [];
       for (int i = 0; i < minItems; i++) {
         _items.add(BubbleValue<void>(2 + _rand.nextDouble() * _difference));
@@ -49,6 +54,7 @@ class _HeaderState extends State<Header> {
 
   void _addValues() {
     _values.addAll(List.generate(3, (index) {
+      // ignore: no_leading_underscores_for_local_identifiers
       List<BubbleValue<void>> _items = [];
       for (int i = 0; i < minItems; i++) {
         _items.add(BubbleValue<void>(2 + Random().nextDouble() * targetMax));
@@ -59,6 +65,7 @@ class _HeaderState extends State<Header> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: no_leading_underscores_for_local_identifiers
     _setting() {
       showModalBottomSheet(
         shape: RoundedRectangleBorder(
