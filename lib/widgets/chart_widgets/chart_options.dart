@@ -112,7 +112,7 @@ class _ChartOptionsWidgetState extends State<ChartOptionsWidget> {
             ),
             Flexible(
               child: ListTile(
-                enabled: widget.onRefresh != null,
+                enabled: widget.onRefresh == true,
                 trailing: Icon(
                   Icons.refresh,
                   color: Theme.of(context).cardColor,
