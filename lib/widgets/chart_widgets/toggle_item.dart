@@ -14,6 +14,7 @@ class ToggleItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
     return Container(
       child: SwitchListTile(
         value: value,

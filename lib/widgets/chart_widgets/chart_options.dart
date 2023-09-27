@@ -19,6 +19,7 @@ class ChartOptionsWidget extends StatefulWidget {
   final List<Widget> toggleItems;
 
   @override
+  // ignore: library_private_types_in_public_api
   _ChartOptionsWidgetState createState() => _ChartOptionsWidgetState();
 }
 
@@ -112,7 +113,8 @@ class _ChartOptionsWidgetState extends State<ChartOptionsWidget> {
             ),
             Flexible(
               child: ListTile(
-                enabled: widget.onRefresh != null,
+                // ignore: unrelated_type_equality_checks
+                enabled: widget.onRefresh == true,
                 trailing: Icon(
                   Icons.refresh,
                   color: Theme.of(context).cardColor,
